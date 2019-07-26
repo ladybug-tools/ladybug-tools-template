@@ -3,9 +3,9 @@
 Use this repository as a template to write a new modules for Ladybug Tools.
 
 ## QuickStart
-1. Install [cookiecutter](https://cookiecutter.readthedocs.io/en/latest/readme.html) locally
+1. Install [cookiecutter](https://cookiecutter.readthedocs.io/en/latest/readme.html) and [pygithub](https://pygithub.readthedocs.io/en/latest/introduction.html) (to automate creating the repositories on Github after generating them locally)
 ```console
-pip install cookiecutter
+pip install cookiecutter pygithub
 ```
 2. Run cookiecutter against this repository and follow the prompts
 ```console
@@ -22,7 +22,7 @@ git commit -m "feat(*): initial commit"
 git tag -a v0.0.0 -m "initial version"
 ```
 
-4. If you did not initialise the project on Github do so manually. Please visit https://github.com/new and create a repository for ladybug-tools/YOUR-PROJECT-SLUG (example: ladybug-tools/fire-ant for a project called Fire Ant).
+4. If you did not initialise the project on Github do so manually. Please visit https://github.com/new and create a repository for ladybug-tools/YOUR-PROJECT-SLUG (example: ladybug-tools/fire-ant for a project called Fire Ant). If you don't have the correct authorization to create repositories on the ladybug-tools organization then create a repo for your Github user and get in touch with the admins.
 
 5. Activate the repository on [TravisCI](https://travis-ci.org/).
   
