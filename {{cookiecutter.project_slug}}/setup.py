@@ -9,7 +9,7 @@ with open('requirements.txt') as f:
     requirements = f.read().splitlines()
 
 setuptools.setup(
-    name="lbt-{{cookiecutter.pkg_name}}",
+    name="{{ cookiecutter.pypi_name }}",
     use_scm_version = True,
     setup_requires=['setuptools_scm'],
     author="Ladybug Tools",

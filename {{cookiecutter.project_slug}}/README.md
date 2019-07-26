@@ -9,7 +9,7 @@
 
 ## Installation
 ```console
-pip install lbt-{{cookiecutter.pkg_name}}
+pip install {{cookiecutter.pypi_name}}
 ```
 
 ## QuickStart
