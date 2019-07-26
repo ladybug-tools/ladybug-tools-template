@@ -6,25 +6,23 @@ python:
 
 install:
   - pip install -r dev-requirements.txt
-
-script:
-  - python -m pytest tests/
-
-after_success:
-  - coverage report
-  - coveralls
+  - pip install -r requirements.txt
 
 jobs:
   include:
+  - stage: test
+    script:
+    - python -m pytest tests/
+    after_success:
+    - coverage report
+    - coveralls
   - stage: deploy
     if: branch = master AND (NOT type IN (pull_request))
     before_install:
     - npm i -g npm@6.6.0
+    - npm install @semantic-release/exec
     python:
     - "3.6"
-    install:
-    - pip install -r dev-requirements.txt
-    - npm install @semantic-release/exec
     script:
     - git config --global user.email "releases@ladybug.tools"
     - git config --global user.name "ladybugbot"
@@ -37,3 +35,5 @@ jobs:
       local_dir: docs/_build/
       on:
         branch: master
+env:
+  - PYPI_USERNAME="ladybug-tools"

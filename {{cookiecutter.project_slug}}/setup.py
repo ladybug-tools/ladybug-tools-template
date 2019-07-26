@@ -5,18 +5,21 @@ import sys
 with open("README.md", "r") as fh:
     long_description = fh.read()
 
+with open('requirements.txt') as f:
+    requirements = f.read().splitlines()
+
 setuptools.setup(
-    name="{{project.name}}",
+    name="lbt-{{cookiecutter.pkg_name}}",
     use_scm_version = True,
     setup_requires=['setuptools_scm'],
     author="Ladybug Tools",
     author_email="info@ladybug.tools",
-    description=" ",
+    description="{{cookiecutter.description}}",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="",
+    url="https://github.com/ladybug-tools/{{cookiecutter.project_slug}}",
     packages=setuptools.find_packages(exclude=["tests"]),
-    install_requires=[],
+    install_requires=requirements,
     classifiers=[
         "Programming Language :: Python :: 2.7",
         "Programming Language :: Python :: 3.6",

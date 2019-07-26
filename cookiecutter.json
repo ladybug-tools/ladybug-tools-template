@@ -1,0 +1,9 @@
+{
+  "name": "My New Project",
+  "project_slug": "{{ cookiecutter.name|lower|replace(' ', '-') }}",
+  "pkg_name": "{{ cookiecutter.project_slug|replace('-', '') }}",
+  "description": "A short description of this project",
+  "version": "0.0.0",
+  "initialise_git": "y",
+  "push_to_github": "n"
+}

@@ -14,12 +14,14 @@
 #
 import os
 import sys
+import datetime
+now = datetime.datetime.now()
 sys.path.insert(0, os.path.abspath('../'))
 
 # -- Project information -----------------------------------------------------
 
-project = '{{project.name}}'
-copyright = '2019, Ladybug Tools'
+project = '{{cookiecutter.name}}'
+copyright = '{}, Ladybug Tools'.format(str(now.year))
 author = 'Ladybug Tools'
 
 # The full version, including alpha/beta/rc tags
@@ -164,7 +166,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, '{{project.name}}.tex', '{{project.name}} Documentation',
+    (master_doc, '{{cookiecutter.project_slug}}.tex', '{{cookiecutter.name}} Documentation',
      'Ladybug Tools', 'manual'),
 ]
 
@@ -174,7 +176,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, '{{project.name}}', '{{project.name}}e Documentation',
+    (master_doc, '{{cookiecutter.project_slug}}', '{{cookiecutter.name}} Documentation',
      [author], 1)
 ]
 
@@ -185,8 +187,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, '{{project.name}}', '{{project.name}} Documentation',
-     author, '{{project.name}}', 'One line description of project.',
+    (master_doc, '{{cookiecutter.project_slug}}', '{{cookiecutter.name}} Documentation',
+     author, '{{cookiecutter.name}}', 'One line description of project.',
      'Miscellaneous'),
 ]
 
