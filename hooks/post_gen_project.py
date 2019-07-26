@@ -1,7 +1,6 @@
 import subprocess
 from github import Github
 
-INITIALISE_GIT = '{{ cookiecutter.initialise_git }}'
 PUSH_TO_GITHUB = '{{ cookiecutter.push_to_github }}'
 git_initialised = False
 
@@ -51,7 +50,6 @@ def push_to_github(initialise_git, git_initialised):
             description='{{ cookiecutter.description }}'
             )
 
-        # r = requests.post(url, data=payload, auth=HTTPBasicAuth(username, token))
 
         subprocess.call(["git", "remote", "add", "origin", "https://github.com/ladybug-tools/{{ cookiecutter.project_slug }}"])
         subprocess.call(["git", "push", "--set-upstream", "origin", "master"])
@@ -81,8 +79,7 @@ You should then be able to run the following commands from the root of the repos
         return False
 
 
-if INITIALISE_GIT == 'y':
-    git_initialised = initialise_git()
+git_initialised = initialise_git()
 
-if PUSH_TO_GITHUB == 'y':
-    pushed_to_github = push_to_github(INITIALISE_GIT, git_initialised)
+if PUSH_TO_GITHUB == 'yes':
+    pushed_to_github = push_to_github(git_initialised)

@@ -5,6 +5,5 @@
   "pkg_name": "{{ cookiecutter.project_slug|replace('-', '_') }}",
   "description": "A short description of this project",
   "version": "0.0.0",
-  "initialise_git": "y",
-  "push_to_github": "n"
+  "push_to_github": ["yes", "no"]
 }
