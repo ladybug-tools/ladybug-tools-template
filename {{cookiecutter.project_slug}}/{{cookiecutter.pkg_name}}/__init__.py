@@ -1,2 +1,2 @@
-"""{{cookiecutter.project_name}} library."""
+"""{{cookiecutter.name}} library."""
 
