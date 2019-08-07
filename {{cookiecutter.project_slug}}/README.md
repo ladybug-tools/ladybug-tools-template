@@ -18,7 +18,7 @@ import {{ cookiecutter.pkg_name }}
 
 ```
 
-## [API Documentation](http://ladybug-tools.github.io/apidoc/{{cookiecutter.project_slug}})
+## [API Documentation](http://ladybug-tools.github.io/{{cookiecutter.project_slug}}/docs)
 
 ## Local Development
 1. Clone this repo locally
