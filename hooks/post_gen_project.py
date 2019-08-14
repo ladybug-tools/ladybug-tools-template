@@ -25,9 +25,7 @@ Then run the following commands:
         )
         return False
 
-def push_to_github(initialise_git, git_initialised):
-    assert initialise_git == 'y', "Cannot push generated repo to github if 'initialise_git' is not 'y'"
-
+def push_to_github(git_initialised):
     try:
         assert git_initialised
         username = subprocess.check_output(

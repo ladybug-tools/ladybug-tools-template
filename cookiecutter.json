@@ -1,7 +1,7 @@
 {
   "name": "My New Project",
   "project_slug": "{{ cookiecutter.name|lower|replace(' ', '-') }}",
-  "pypi_name": "lbt-{{ cookiecutter.project_slug}}",
+  "pypi_name": "{{ cookiecutter.project_slug}}",
   "pkg_name": "{{ cookiecutter.project_slug|replace('-', '_') }}",
   "description": "A short description of this project",
   "version": "0.0.0",
