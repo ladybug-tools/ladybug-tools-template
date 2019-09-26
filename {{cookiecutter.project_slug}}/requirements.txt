@@ -1,0 +1,3 @@
+{%- if cookiecutter.package_requirements != "Type any packages required, leaving spaces in between each name. Press enter if none." -%}
+{{ cookiecutter.package_requirements|lower|replace(' ', '\n') }}
+{%- endif -%}

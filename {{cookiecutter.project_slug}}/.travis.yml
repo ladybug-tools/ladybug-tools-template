@@ -6,6 +6,9 @@ python:
 
 install:
   - pip install -r dev-requirements.txt
+{%- if cookiecutter.package_requirements != "Type any packages required, leaving spaces in between each name. Press enter if none." %}
+  - pip install -r requirements.txt
+{%- endif %}
 
 script:
   - python -m pytest tests/
@@ -24,6 +27,9 @@ jobs:
     - "3.6"
     install:
     - pip install -r dev-requirements.txt
+{%- if cookiecutter.package_requirements != "Type any packages required, leaving spaces in between each name. Press enter if none." %}
+    - pip install -r requirements.txt
+{%- endif %}
     - npm install @semantic-release/exec
     script:
     - git config --global user.email "releases@ladybug.tools"
