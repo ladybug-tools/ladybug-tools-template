@@ -84,13 +84,13 @@ jobs:
         run: |
           pip install -U .
           pip install -r dev-requirements.txt
-          sphinx-apidoc -f -e -d 4 -o ./docs ./{{cookiecutter.pkg_name]]
+          sphinx-apidoc -f -e -d 4 -o ./docs ./{{cookiecutter.pkg_name}}
           sphinx-build -b html ./docs ./docs/_build/docs
       - name: deploy to github pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           # this will use ladybugbot token
-          github_token: ${{ secrets.GITHUB_TOKEN ]]
+          github_token: $[[ secrets.GITHUB_TOKEN ]]
           publish_branch: gh-pages
           publish_dir: docs/_build/
           force_orphan: true
