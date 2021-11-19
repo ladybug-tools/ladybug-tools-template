@@ -25,11 +25,4 @@ and manually replace all instances of `[[` with `{{` and `]]` with `}}`.
 
   ![image](https://user-images.githubusercontent.com/2915573/101363031-dc638600-386e-11eb-9042-600ee03e300f.png)
 
-65. Activate this repository on [coveralls](https://coveralls.io/) by going to "ADD REPOS"
-at the menu on the left-hand side at the link. Note that you will also likely want to set
-the "Coverage Decrease Failure Threshold" of the repo to be something like 1% since the
-default (0%) often causes build failure messages for small tweaks that don't require new
-tests. To change the coverage decrease failure threshold, you can follow the instructions
-[here](https://github.com/deepchem/deepchem/issues/648).
-
 The repository should be ready! Now go write some actual code!
