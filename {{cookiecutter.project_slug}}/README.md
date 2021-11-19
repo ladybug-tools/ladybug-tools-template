@@ -1,7 +1,6 @@
 [![Build Status](https://github.com/ladybug-tools/{{cookiecutter.project_slug}}/workflows/CI/badge.svg)](https://github.com/ladybug-tools/{{cookiecutter.project_slug}}/actions)
-[![Coverage Status](https://coveralls.io/repos/github/ladybug-tools/{{cookiecutter.project_slug}}/badge.svg?branch=master)](https://coveralls.io/github/ladybug-tools/{{cookiecutter.project_slug}})
 
-[![Python 2.7](https://img.shields.io/badge/python-2.7-green.svg)](https://www.python.org/downloads/release/python-270/) [![Python 3.6](https://img.shields.io/badge/python-3.6-blue.svg)](https://www.python.org/downloads/release/python-360/)
+[![Python 3.7](https://img.shields.io/badge/python-3.7-blue.svg)](https://www.python.org/downloads/release/python-370/) [![Python 2.7](https://img.shields.io/badge/python-2.7-green.svg)](https://www.python.org/downloads/release/python-270/) [![IronPython](https://img.shields.io/badge/ironpython-2.7-red.svg)](https://github.com/IronLanguages/ironpython2/releases/tag/ipy-2.7.8/)
 
 # {{cookiecutter.name}}
 

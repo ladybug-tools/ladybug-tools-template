@@ -244,7 +244,7 @@ custom_cli_docs = True
 cli_overwrite = False
 
 # Repository/library hash table.
-# If respository not found in table, the module name will be extracted from the
+# If repository not found in table, the module name will be extracted from the
 # modules.rst file in the project folder.
 # Format: {repository_name: library_name}
 ht_repo_lib = {}
@@ -511,7 +511,7 @@ def update_cli_index(index_path, group_filenames):
         group_filenames: Name of the click groups to include in the
             index \'Commands\' section.
     """
-    # Include exisitng cli/index.rst data if present.
+    # Include existing cli/index.rst data if present.
     cli_content = []
     if os.path.isfile(index_path):
         with open(index_path, 'r') as index_file:
@@ -533,12 +533,10 @@ def update_cli_index(index_path, group_filenames):
                     "\n"
                     ]
 
-    # replace root filenames with 'main' and place at top of list
-    main_file = list(set(group_filenames).intersection(["__init__", "cli"]))[0]
-    if main_file:
-        group_filenames.remove(main_file)
-        group_filenames.insert(0, 'main')
     # Add sub-command groups to content.
+    if "main" in group_filenames:
+        group_filenames.remove('main')
+        group_filenames.insert(0, 'main')
     for file in group_filenames:
         cli_content.append("   {}\n".format(file))
 
@@ -550,7 +548,7 @@ def update_cli_index(index_path, group_filenames):
 
 
 def update_doc_index(proj_folder, lib_name):
-    """Update the documenation index.rst file inside the \\docs folder to include
+    """Update the documentation index.rst file inside the \\docs folder to include
     a CLI Docs section if not present already.
 
     Args:
